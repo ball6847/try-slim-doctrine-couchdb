@@ -1,0 +1,13 @@
+*.swp
+vendor
+
+# app specific
+config.local.php
+db.sqlite
+
+cache/*
+logs/*
+tmp/*
+public/files/*
+
+!.gitkeep

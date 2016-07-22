@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+  nginx:
+    image: million12/nginx-php:php70
+    env_file: docker-compose.env
+    volumes:
+      - ./:/data/htdocs
+      - ./docker/etc/nginx/conf.d:/etc/nginx/hosts.d
+    working_dir: /data/htdocs
+  couchdb:
+    image: klaemo/couchdb:1.6
+    env_file: docker-compose.env
+    volumes:
+      - ./docker/data:/usr/local/var/lib/couchdb
