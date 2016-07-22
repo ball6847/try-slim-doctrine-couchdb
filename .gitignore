@@ -10,4 +10,6 @@ logs/*
 tmp/*
 public/files/*
 
+docker/data/*
+
 !.gitkeep
